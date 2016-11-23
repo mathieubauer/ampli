@@ -62,6 +62,7 @@
                             <a class="dropdown-item" href="#">Score : <?php echo $resultat['score']; ?></a>
                             <a class="dropdown-item" href="#"><?php echo $resultat['likes']; ?> like(s) à distribuer</a>
                             <a class="dropdown-item" href="#">Equipe : <?php echo $resultat['id_team1']; ?></a>
+                            <a class="dropdown-item" href="index.php?section=deconnexion">Se déconnecter</a>
                         </div>
                     </li>                  
                 </ul>

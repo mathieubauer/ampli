@@ -26,6 +26,9 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
         
         include_once('modele/liste_ideas.php');
         include_once('vue/liste_ideas.php');
+        
+        include_once('modele/liste_posts.php');
+        include_once('vue/liste_posts.php');
              
     }
     
@@ -36,6 +39,9 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
         
         include_once('modele/liste_ideas.php');
         include_once('vue/liste_ideas.php');
+        
+        include_once('modele/liste_posts.php');
+        include_once('vue/liste_posts.php');
              
     }
     
