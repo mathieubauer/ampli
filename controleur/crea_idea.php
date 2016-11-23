@@ -18,6 +18,7 @@ if (!empty($_POST['ideaname']) && !empty($_POST['ideatext'])) {
     $likes = 1; 
     
     include_once('modele/crea_idea.php');
+    include_once('modele/crea_wp_post.php');
     $id_user = $_SESSION['id'];
     $points = 100;
     include_once('modele/ajoute_points.php');
