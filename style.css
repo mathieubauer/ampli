@@ -1,0 +1,123 @@
+body {
+    padding: 70px 0;
+    background-color: #d5d5d5;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 30px 0 20px;
+}
+
+
+.idee {
+    margin: 40px;
+    text-align: right;
+}
+
+
+
+.navbar {
+    background-color: #202E42;
+}
+
+.navbar .navbar-nav > .nav-item > .nav-link {
+    color: #fff;
+    margin-left: 20px;
+}
+
+.navbar .navbar-nav > .nav-item  > .nav-link:hover {
+    color: #aaa;
+}
+
+.navbar .navbar-brand, .navbar-default .navbar-text {
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.card img {
+    margin: 0 0 15px;
+}
+
+
+/*
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.card .list-group {
+    margin-bottom: 0;
+}
+
+.card .list-group-item {
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+.card table {
+    margin: 0;
+}
+
+.card img {
+    margin: 0 0 15px;
+}
+
+
+
+
+.question {
+	font-weight: bold;
+	font-size: 1.2em;
+	min-height: 120px;
+}
+
+form .btn-group-vertical .btn {
+    text-align: left;
+    white-space: normal;
+    min-height: 80px;
+}
+
+form .bouton_scale .btn {
+    text-align: left;
+    white-space: normal;
+    min-height: 50px;
+}
+
+form .btn-group-vertical {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+	header {
+		display: none;
+	}
+	body {
+		padding: 0;
+	}
+		
+}
+
+.module_menu {
+    margin-top: 10px;
+}
+
+
+.footer_client {
+    margin-top: 15px;
+}
+
+
+
+.black {
+    color:black;
+}
+
