@@ -4,8 +4,8 @@
     <h1>Contenu Administrateur</h1>
 
         <a class="btn btn-secondary" href="index.php?section=admin_users">Gestion utilisateurs</a>
+        <a class="btn btn-secondary" href="index.php?section=admin_ideas">Gestion idées</a>
         <a class="btn btn-secondary disabled" href="index.php?section=admin_groupes">Gestion équipes</a>
-        <a class="btn btn-secondary disabled" href="index.php?section=admin_groupes">Gestion idées</a>
     
     </div>
 </div>

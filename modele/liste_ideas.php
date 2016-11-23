@@ -1,8 +1,6 @@
 <?php
 
-// récupère toutes les idées
-    
-//$requete = $bdd->query('SELECT * FROM ampli_ideas ORDER BY id ASC LIMIT 0, 999');
+// Récupère les caractéristiques des idées + l'username correspondant
 
 
 $requete = $bdd->query('

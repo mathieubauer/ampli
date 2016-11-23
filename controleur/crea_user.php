@@ -22,10 +22,10 @@ if (!empty($_POST['username']) && !empty($_POST['password1']) && !empty($_POST['
         
         $permissions = 'user';
         $email = '';
-        $id_team1 = 0;
+        $id_team1 = $_POST['id_team1'];
         $id_team2 = 0;
         $score = 1000;
-        $likes = 8;
+        $likes = 10;
                 
 
         // Vérifie les doublons

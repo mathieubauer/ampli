@@ -40,7 +40,11 @@ if ($_GET['info'] == 'err_crea') {
 }
 
 if ($_GET['info'] == 'suppr_user') {
-    $info = "<p>L'utilisateur a été supprimé.</p>";
+    $info = "L'utilisateur a été supprimé.";
+}
+
+if ($_GET['info'] == 'suppr_idea') {
+    $info = "L'idée a été supprimée.";
 }
 
 if ($_GET['info'] == 'nomorelikes') {
@@ -127,6 +131,14 @@ if ($_GET['section'] == 'admin_groupes') {
 
 if ($_GET['section'] == 'edit_groupe') {
     include_once('controleur/edit_groupe.php');
+}
+
+if ($_GET['section'] == 'admin_ideas') {
+    include_once('controleur/admin_ideas.php');
+}
+
+if ($_GET['section'] == 'suppression_idea') {
+    include_once('controleur/suppression_idea.php');
 }
 
 // Idées ####################################################################
