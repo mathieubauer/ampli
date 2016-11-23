@@ -10,6 +10,61 @@
 
 if (!empty($_POST['ideaname']) && !empty($_POST['ideatext'])) {
     
+
+    
+
+    // ################################################# UPLOAD IMAGE
+    
+    $target_dir = "uploads/";
+    $melange = md5(uniqid(rand(), true));
+    $target_file = $target_dir . $melange .  basename($_FILES["ideaimg"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+    
+    // Check if image file is a actual image or fake image
+    if(isset($_POST["submit"])) {
+    $check = getimagesize($_FILES["ideaimg"]["tmp_name"]);
+        if($check !== false) {
+        $info = "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+        } else {
+        $info = "File is not an image.";
+        $uploadOk = 0;
+        }
+    }
+    
+    // Check if file already exists
+    if (file_exists($target_file)) {
+    $info = "Sorry, file already exists.";
+    $uploadOk = 0;
+    }
+    
+    // Check file size
+    if ($_FILES["ideaimg"]["size"] > 10485760) {
+    $info = "Sorry, your file is too large.";
+    $uploadOk = 0;
+    }
+    
+    // Allow certain file formats
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
+    $info = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $uploadOk = 0;
+    }
+    
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk == 0) {
+        $info = "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($_FILES["ideaimg"]["tmp_name"], $target_file)) {
+        $info = "The file ". basename( $_FILES["ideaimg"]["name"]). " has been uploaded.";
+        } else {
+        $info = "Sorry, there was an error uploading your file.";
+        }
+    }
+   
+    // #################################################    
+    
     $ideaname = $_POST['ideaname'];
     $ideatext = $_POST['ideatext'];
     

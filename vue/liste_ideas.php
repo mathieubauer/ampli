@@ -9,6 +9,11 @@ while ($donnees = $requete->fetch()) {
 
 <div class="card">
 <div class="card-header"><?php echo htmlspecialchars($donnees['category']); ?></div>
+    
+    
+<?php if ($donnees['ideaimg'] != "") { ?>    
+<img src="<?php echo $donnees['ideaimg']; ?>" alt="Card image" width="100%" height="100%">
+<?php } ?> 
 
 <div class="card-block">
 <h4 class="card-title"><?php echo htmlspecialchars($donnees['ideaname']); ?></h4>

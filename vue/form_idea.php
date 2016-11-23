@@ -19,7 +19,7 @@
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
-      <form method="post" action="index.php?section=crea_idea" >
+      <form method="post" action="index.php?section=crea_idea" enctype="multipart/form-data">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -41,7 +41,11 @@
                       <option>Rêve</option>
                       <option>Mise en oeuvre</option>
                       <option>Projet</option>
-                    </select>
+                    </select><br>
+          
+                    <label for="ideaimg">Illustration (facultatif)</label>
+                    <input type="file" name="ideaimg" id="ideaimg" class="form-control" />
+                    <input type="hidden" name="MAX_FILE_SIZE" value="10485760" /> <!-- 10 Mo -->
 
                 
       </div>
