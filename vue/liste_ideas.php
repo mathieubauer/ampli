@@ -1,13 +1,12 @@
-<div class="row">    
+<div class="row grid " data-packery='{ "itemSelector": ".grid-item", "gutter": 10 }'>    
     
 <?php
 while ($donnees = $requete->fetch()) {
 ?>
 
-    
-<div class="col-md-3">
 
-<div class="card">
+
+<div class="grid-item card">
 <div class="card-header"><?php echo htmlspecialchars($donnees['category']); ?></div>
     
     
@@ -28,13 +27,11 @@ while ($donnees = $requete->fetch()) {
 
 </div>
 
-</div>
- 
+
 
 <?php   
 }
 $requete->closeCursor();
 ?>  
 
-                  
-</div>
+        </div>           
