@@ -10,6 +10,15 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
 
+<script>
+
+$('.grid').isotope({
+  layoutMode: 'packery',
+  itemSelector: '.grid-item'
+});
+
+    
+</script>
 
     </body>
 </html>

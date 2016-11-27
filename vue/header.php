@@ -33,6 +33,8 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         
+<script src="https://unpkg.com/packery@2.1/dist/packery.pkgd.js"></script>
+
         
     </head>
     <body>
