@@ -159,11 +159,8 @@ if ($_GET['section'] == 'todo_suppr') {
     include_once('controleur/todo_suppr.php');
 }
 
-// Messages ###################################################################
+// ###########################################################################
 
-if ($_GET['section'] == 'crea_message') {
-    include_once('controleur/crea_message.php');
-}
 
 
 

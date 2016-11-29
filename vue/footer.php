@@ -10,8 +10,6 @@
 <script src="bootstrap/js/tether.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<script src="like.js"></script>
-
 
 
     </body>
