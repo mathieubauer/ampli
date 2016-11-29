@@ -19,7 +19,7 @@ if (isset($_SESSION['username'])) {
 
 // Affiche des informations complémentaires ou alertes
 if ($_GET['info'] == 'login_ok') {
-    $info = "<p>L'utilisateur a été crée avec succès. Vous pouvez maintenant vous connecter.</p>";
+    $info = "L'utilisateur a été crée avec succès. Vous pouvez maintenant vous connecter.";
 }
 
 if ($_GET['info'] == 'todo_ok') {
@@ -159,8 +159,11 @@ if ($_GET['section'] == 'todo_suppr') {
     include_once('controleur/todo_suppr.php');
 }
 
-// ###########################################################################
+// Messages ###################################################################
 
+if ($_GET['section'] == 'crea_message') {
+    include_once('controleur/crea_message.php');
+}
 
 
 
