@@ -4,7 +4,7 @@
     
     <div class="row">
     
-    <div id="chat_aff" class="col-md-6">
+    <div id="container_chat_messages" class="col-md-6">
         <!-- Contiendra les messages -->
     </div>
     
@@ -16,7 +16,7 @@
             <div class="col-md-8">  
                 <div class="input-group">
                 <span class="input-group-addon">?</span>
-                <input type="text" name="message" id="message" class="form-control" placeholder="Votre message" />
+                <input type="text" name="message" id="chat_message" class="form-control" placeholder="Votre message" />
                 </div>
             </div>
             
@@ -31,28 +31,3 @@
     </div>
     
 </div>
-
-
-
-<script src="bootstrap/js/jquery.min.js"></script>
-
-<script>
-
-    setInterval(function() {
-        $("#chat_aff").load("controleur/chat_load.php", function() {});  
-    }, 1000);
-    
-    $("#submit").click(function() {
-        var message = $("#message").val();
-        $("#message").val("");
-                        
-        $.ajax({
-        async: false,
-        type: 'GET',                                                            // type de donné envoyé
-        url: 'controleur/chat_add.php?message=' + message            // url
-        });
-        
-    });
-    
-    
-</script>

@@ -7,7 +7,7 @@ while ($donnees = $requete->fetch()) {
     
 <div class="col-md-12">
     <div class="col-md-4">
-        <?php echo $donnees['nom']; ?> :
+        <strong><?php echo $donnees['nom']; ?> :</strong>
     </div>
     
     <div class="col-md-8">
