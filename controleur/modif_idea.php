@@ -5,7 +5,17 @@ include_once('../modele/connexion_sql.php');
 
 // VERIFIER LE PROBLEME GET / POST
 
-if(isset($_GET['titre']) && isset($_GET['id']) && !empty($_GET['titre'])) {
+if($_GET['titre'] == 'null') {
+    
+    $id_idea = $_GET['id'];
+    
+    $requete = $bdd->query('SELECT ideaname FROM ampli_ideas WHERE id = ' . $id_idea);
+    $requete->execute();
+    $donnees = $requete->fetch();
+    echo $donnees['ideaname'];    
+    
+    
+} else if(isset($_GET['titre']) && isset($_GET['id']) && !empty($_GET['titre'])) {
     
     $ideaname = $_GET['titre'];
     $id_idea = $_GET['id'];
@@ -17,6 +27,10 @@ if(isset($_GET['titre']) && isset($_GET['id']) && !empty($_GET['titre'])) {
     
     echo $ideaname;
     
+} else {
+    
+    echo 'Insérer un titre';
+    
 };
 
-echo 'Insérer un titre';
+

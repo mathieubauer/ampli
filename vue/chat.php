@@ -1,4 +1,3 @@
-<div id="body">
 
     <h1>Prototype de chat en Ajax avec PHP et jQuery</h1>
     
@@ -30,4 +29,3 @@
     </div>
     </div>
     
-</div>

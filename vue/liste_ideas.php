@@ -4,18 +4,31 @@
     
     $id_user = $_SESSION['id'];                             // id de l'utilisateur connecté   
    
+    // Fonction qui identifie les idées likées / non likées par l'utilisateur
     function texte_like($id_user, $id_idea) {
     
         include('modele/connexion_sql.php');  
         include('modele/verification_likes.php');
 
-        if (!$resultat) {
-            $texte_bouton_like = 'J\'aime';
-        } else {
-            $texte_bouton_like = 'Je n\'aime plus';
+        if (!$resultat) { $texte_bouton_like = 'J\'aime';
+        } else { $texte_bouton_like = 'Je n\'aime plus';
         }
         
         return $texte_bouton_like;
+        
+    }
+    
+    // Fonction qui identifie les idées de l'utilisateur
+    function user_ideas($id_user, $id_idea) {
+        
+        include('modele/connexion_sql.php');  
+        include('modele/verification_idea.php');
+        
+        if (!$resultat) { $edit_auteur = '';
+        } else { $edit_auteur = '<button id="" class="btn btn-primary edit">Editer</button>';
+        }
+        
+        return $edit_auteur;
         
     }
     
@@ -24,6 +37,8 @@ while ($donnees = $requete->fetch()) {
         
     $id_idea = $donnees['id'];                              // id de l'idée    
     $tl = texte_like($id_user, $id_idea);                   // appelle la fonction -> 
+    
+    $edit = user_ideas($id_user, $id_idea);
     
 ?>
 
@@ -39,14 +54,15 @@ while ($donnees = $requete->fetch()) {
         <?php } ?> 
 
         <div class="card-block">
-        <h4 class="card-title" id="titre_<?php echo $donnees['id']; ?>"><?php echo htmlspecialchars($donnees['ideaname']); ?></h4>
-        <p class="card-text"><?php echo htmlspecialchars($donnees['ideatext']); ?></p>
-        <!-- <a href="index.php?section=like_idea&idea=<?php // echo $donnees['id']; ?>" class="btn btn-primary">J'aime</a> -->
-        <button id="like_<?php echo $donnees['id']; ?>" class="btn btn-primary like"><?php echo $tl ?></button>
+            <h4 class="card-title <?php echo $ca ?>" id="titre_<?php echo $donnees['id']; ?>"><?php echo htmlspecialchars($donnees['ideaname']); ?></h4>
+            <p class="card-text"><?php echo htmlspecialchars($donnees['ideatext']); ?></p>
+            <!-- <a href="index.php?section=like_idea&idea=<?php // echo $donnees['id']; ?>" class="btn btn-primary">J'aime</a> -->
+            <button id="like_<?php echo $donnees['id']; ?>" class="btn btn-primary like"><?php echo $tl ?></button>
+            <?php echo $edit ?>
         </div>
 
         <div class="card-footer text-muted">
-        Auteur : <?php echo $donnees['username']; ?></br>
+        <span>Auteur : <?php echo $donnees['username']; ?></span></br>
         <cite id="nblike_<?php echo $donnees['id']; ?>">Likes : <?php echo $donnees['likes']; ?></cite>
         </div>
 
@@ -60,28 +76,5 @@ while ($donnees = $requete->fetch()) {
 $requete->closeCursor();
 ?>  
 
-
                   
-</div>
-
-
-<!-- Modal --
-<div class="modal fade" id="modif_idea" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title" id="myModalLabel">Modifier une idée</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
 </div>
