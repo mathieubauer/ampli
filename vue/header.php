@@ -21,6 +21,8 @@
         <link rel="stylesheet" type="text/css" href="stylecard.css">
         
         <link rel="icon" type="image/png" href="img/favicon.png" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 
         
         <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet"> --> 

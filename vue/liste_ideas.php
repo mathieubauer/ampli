@@ -30,7 +30,7 @@ while ($donnees = $requete->fetch()) {
     
 <div class="col-md-3">
 
-    <div class="card" id="<?php echo htmlspecialchars($donnees['id']); ?>">
+    <div class="card card_idea" id="<?php echo htmlspecialchars($donnees['id']); ?>" data-toggle="modal" data-target="#modif_idea">
     
         <div class="card-header"><?php echo htmlspecialchars($donnees['category']); ?></div>
 
@@ -39,14 +39,14 @@ while ($donnees = $requete->fetch()) {
         <?php } ?> 
 
         <div class="card-block">
-        <h4 class="card-title"><?php echo htmlspecialchars($donnees['ideaname']); ?></h4>
+        <h4 class="card-title" id="titre_<?php echo $donnees['id']; ?>"><?php echo htmlspecialchars($donnees['ideaname']); ?></h4>
         <p class="card-text"><?php echo htmlspecialchars($donnees['ideatext']); ?></p>
         <!-- <a href="index.php?section=like_idea&idea=<?php // echo $donnees['id']; ?>" class="btn btn-primary">J'aime</a> -->
         <button id="like_<?php echo $donnees['id']; ?>" class="btn btn-primary like"><?php echo $tl ?></button>
         </div>
 
         <div class="card-footer text-muted">
-        <p>Auteur : <?php echo $donnees['username']; ?></p>
+        Auteur : <?php echo $donnees['username']; ?></br>
         <cite id="nblike_<?php echo $donnees['id']; ?>">Likes : <?php echo $donnees['likes']; ?></cite>
         </div>
 
@@ -60,5 +60,28 @@ while ($donnees = $requete->fetch()) {
 $requete->closeCursor();
 ?>  
 
+
                   
+</div>
+
+
+<!-- Modal --
+<div class="modal fade" id="modif_idea" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Modifier une idée</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
