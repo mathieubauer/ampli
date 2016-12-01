@@ -1,4 +1,5 @@
-<div class="row">    
+<div class="row">  
+<div class="grid">  
     
 <?php  
     
@@ -25,7 +26,7 @@
         include('modele/verification_idea.php');
         
         if (!$resultat) { $edit_auteur = '';
-        } else { $edit_auteur = '<button id="" class="btn btn-primary edit">Editer</button>';
+        } else { $edit_auteur = '<button id="" class="btn btn-link edit">Editer</button>';
         }
         
         return $edit_auteur;
@@ -42,10 +43,10 @@ while ($donnees = $requete->fetch()) {
     
 ?>
 
-    
-<div class="col-md-3">
+ 
+<div class="grid-item">
 
-    <div class="card card_idea" id="<?php echo htmlspecialchars($donnees['id']); ?>" data-toggle="modal" data-target="#modif_idea">
+    <div class="card card_idea text-xs-center" id="<?php echo htmlspecialchars($donnees['id']); ?>" >
     
         <div class="card-header"><?php echo htmlspecialchars($donnees['category']); ?></div>
 
@@ -54,10 +55,10 @@ while ($donnees = $requete->fetch()) {
         <?php } ?> 
 
         <div class="card-block">
-            <h4 class="card-title <?php echo $ca ?>" id="titre_<?php echo $donnees['id']; ?>"><?php echo htmlspecialchars($donnees['ideaname']); ?></h4>
-            <p class="card-text"><?php echo htmlspecialchars($donnees['ideatext']); ?></p>
+            <h3 class="card-title <?php echo $ca ?>" id="titre_<?php echo $donnees['id']; ?>"><?php echo htmlspecialchars($donnees['ideaname']); ?></h3>
+            <p class="card-text showmore"><?php echo htmlspecialchars($donnees['ideatext']); ?></p>
             <!-- <a href="index.php?section=like_idea&idea=<?php // echo $donnees['id']; ?>" class="btn btn-primary">J'aime</a> -->
-            <button id="like_<?php echo $donnees['id']; ?>" class="btn btn-primary like"><?php echo $tl ?></button>
+            <button id="like_<?php echo $donnees['id']; ?>" class="btn btn-primary like btn-sm"><?php echo $tl ?></button>
             <?php echo $edit ?>
         </div>
 
@@ -69,6 +70,7 @@ while ($donnees = $requete->fetch()) {
     </div>
 
 </div>
+
  
 
 <?php   
@@ -76,5 +78,5 @@ while ($donnees = $requete->fetch()) {
 $requete->closeCursor();
 ?>  
 
-                  
+</div>                   
 </div>

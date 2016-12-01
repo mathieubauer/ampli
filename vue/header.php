@@ -18,7 +18,7 @@
         
         
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="stylecard.css">
+        <!--<link rel="stylesheet" type="text/css" href="stylecard.css"> -->
         
         <link rel="icon" type="image/png" href="img/favicon.png" />
         

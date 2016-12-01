@@ -14,6 +14,14 @@ h2 {
     margin: 20px 0 10px;
 }
 
+h4 {
+    margin: 20px 0 10px;
+}
+
+p {
+    font-size: 15px;
+}
+
 
 .idee {
     margin: 40px;
@@ -51,6 +59,32 @@ h2 {
     width: 100%;
     height: 100%;
 }
+
+.card {
+    border: 0;
+    margin-bottom: 0;
+}
+
+.card-header {
+    background-color: #202E42;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #224C4F;
+}
+
+
+
+.showmore_content		{ position:relative; overflow:hidden; }			
+.showmore_trigger 		{ width:100%; height:45px; line-height:45px; cursor:pointer; }
+.showmore_trigger span	{ display:block; }
+
+
+
+.grid-item { width: 24.3%; }
+.grid-item--width2 { width: 50%; }
+
 
 
 /*

@@ -14,6 +14,12 @@
 <script src="js/like.js"></script>
 <script src="js/modif_idea.js"></script>
 
+<script src="js/jquery.showmore.min.js"></script>
+<script src="js/voirplus.js"></script>
+
+<script src="js/packery.pkgd.js"></script>
+<script src="js/grille.js"></script>
+
 
 
     </body>
