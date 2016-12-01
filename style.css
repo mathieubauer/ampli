@@ -62,7 +62,7 @@ p {
 
 .card {
     border: 0;
-    margin-bottom: 0;
+    margin-bottom: 20px;
 }
 
 .card-header {
@@ -81,9 +81,23 @@ p {
 .showmore_trigger span	{ display:block; }
 
 
-
 .grid-item { width: 24.3%; }
 .grid-item--width2 { width: 50%; }
+
+@media (max-width: 768px) { 
+    .grid-item { width: 100%; }
+
+
+}
+
+.gutter-10.row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+.gutter-10 [class^="col-"], .gutter-10 [class^=" col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
 
 
 

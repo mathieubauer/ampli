@@ -1,7 +1,10 @@
 
-    <h1>Prototype de chat en Ajax avec PHP et jQuery</h1>
+
+    
     
     <div class="row">
+        
+    <h1>Prototype de chat en Ajax avec PHP et jQuery</h1>
     
     <div id="container_chat_messages" class="col-md-6">
         <!-- Contiendra les messages -->

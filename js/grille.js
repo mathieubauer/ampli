@@ -1,5 +1,7 @@
 $('.grid').packery({
   // options
   itemSelector: '.grid-item',
-  gutter: 10
+columnWidth: '.grid-sizer',
+  percentPosition: true
+  //gutter: 10
 });

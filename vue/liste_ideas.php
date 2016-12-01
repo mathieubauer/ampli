@@ -1,5 +1,7 @@
-<div class="row">  
-<div class="grid">  
+<div class="row gutter-10">  
+<div class="grid"> 
+    
+    <div class="grid-sizer col-md-3"></div>
     
 <?php  
     
@@ -44,7 +46,8 @@ while ($donnees = $requete->fetch()) {
 ?>
 
  
-<div class="grid-item">
+<div class="col-md-3 grid-item">
+<div class="grid-item-content">
 
     <div class="card card_idea text-xs-center" id="<?php echo htmlspecialchars($donnees['id']); ?>" >
     
@@ -69,6 +72,7 @@ while ($donnees = $requete->fetch()) {
 
     </div>
 
+</div>
 </div>
 
  
