@@ -13,8 +13,8 @@
         include('modele/connexion_sql.php');  
         include('modele/verification_likes.php');
 
-        if (!$resultat) { $texte_bouton_like = 'J\'aime';
-        } else { $texte_bouton_like = 'Je n\'aime plus';
+        if (!$resultat) { $texte_bouton_like = '<span class="fa fa-heart"></span> J\'aime';
+        } else { $texte_bouton_like = '<span class="fa fa-heart-o"></span> Je n\'aime plus';
         }
         
         return $texte_bouton_like;
@@ -28,7 +28,10 @@
         include('modele/verification_idea.php');
         
         if (!$resultat) { $edit_auteur = '';
-        } else { $edit_auteur = '<button id="" class="btn btn-link edit">Editer</button>';
+        } else { 
+            $edit_auteur = '
+            <button class="btn btn-link btn-sm edit"><span class="fa fa-pencil"></button>
+            <button class="btn btn-link btn-sm suppr"><span class="fa fa-trash"></span></button>';
         }
         
         return $edit_auteur;
@@ -59,7 +62,7 @@ while ($donnees = $requete->fetch()) {
 
         <div class="card-block">
             <h3 class="card-title <?php echo $ca ?>" id="titre_<?php echo $donnees['id']; ?>"><?php echo htmlspecialchars($donnees['ideaname']); ?></h3>
-            <p class="card-text showmore"><?php echo htmlspecialchars($donnees['ideatext']); ?></p>
+            <p class="card-text"><?php echo htmlspecialchars($donnees['ideatext']); ?></p>
             <!-- <a href="index.php?section=like_idea&idea=<?php // echo $donnees['id']; ?>" class="btn btn-primary">J'aime</a> -->
             <button id="like_<?php echo $donnees['id']; ?>" class="btn btn-primary like btn-sm"><?php echo $tl ?></button>
             <?php echo $edit ?>

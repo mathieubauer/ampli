@@ -51,27 +51,9 @@ p {
     color: #fff;
 }
 
-.card img {
-    margin: 0 0 15px;
-}
-
-.card-text img {
-    width: 100%;
-    height: 100%;
-}
-
-.card {
-    border: 0;
-    margin-bottom: 20px;
-}
-
-.card-header {
-    background-color: #202E42;
-    color: #fff;
-}
-
 .btn-primary {
     background-color: #224C4F;
+    border-color: #224C4F;
 }
 
 
@@ -98,6 +80,35 @@ p {
   padding-right: 5px;
   padding-left: 5px;
 }
+
+/* ########## Design des Cards ########## */
+
+.card img {
+    margin: 0 0 15px;
+}
+
+.card-text img {
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    border: 0;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+/* Quand ce sera draggable 
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+} */
+
+.card-header {
+    background-color: #202E42;
+    color: #fff;
+}
+
 
 
 

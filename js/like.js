@@ -6,7 +6,10 @@ $('.like').click(function() {
     
     // var rel = $(this).attr("rel");                      // je ne sais pas à quoi ça sert ?
     
-    var contenu = $(this).html();
+    var contenu_all = $(this).html();
+    var contenu_split = contenu_all.split("</span> ");
+    var contenu = contenu_split[1];
+    
     
     if (contenu == 'J\'aime') {
         var etat = 0;                                   // pas encore liké
@@ -29,10 +32,10 @@ $('.like').click(function() {
         success: function(data) {
             
             if(etat == 0) {  
-                $('#' + id_button).html('Je n\'aime plus');
+                $('#' + id_button).html('<span class="fa fa-heart-o"></span> Je n\'aime plus');
                 $('#nblike_' + id).html('Likes : ' + data);
             } else {            
-                $('#' + id_button).html('J\'aime');
+                $('#' + id_button).html('<span class="fa fa-heart"></span> J\'aime');
                 $('#nblike_' + id).html('Likes : ' + data);
             }      
             

@@ -29,3 +29,26 @@ $('.card_idea .edit').click(function() {
     
         
 });
+
+
+$('.card_idea .suppr').click(function() {
+    
+    var id_button = $(this).parent().parent().attr("id");
+    var id = id_button
+    var contenu = $('#titre_' + id).html();
+    
+    var confirmerSuppression = confirm('Êtes-vous sûr de vouloir supprimer l\'idée : ' + contenu);
+    
+    if(confirmerSuppression) {
+        
+        var url = 'controleur/suppression_idea_user.php?id=' + id;
+        
+        $.ajax({
+            url: url,
+            success: function() {  },
+            error: function () {  }
+        });
+                
+    } 
+
+});

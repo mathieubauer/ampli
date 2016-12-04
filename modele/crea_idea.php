@@ -6,7 +6,7 @@ $requete = $bdd->prepare('INSERT INTO ampli_ideas(ideaname, ideatext, ideaimg, c
 $requete->execute(array(
     'ideaname' => $ideaname,
     'ideatext' => $ideatext,
-    'ideaimg' => $target_file,
+    'ideaimg' => $ideaimg,
     'category' => $category,
     'id_user' => $id_user,
     'likes' => $likes));
