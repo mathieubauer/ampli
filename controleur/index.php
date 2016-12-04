@@ -23,11 +23,12 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
         include_once('vue/contenu_user.php');
         
         include_once('vue/form_idea.php');
+        include_once('vue/form_idea_modif.php');
         
         include_once('modele/liste_ideas.php');
         include_once('vue/liste_ideas.php');
         
-        include_once('vue/chat.php');
+        include_once('vue/module_chat.php');
         
         
         
@@ -40,10 +41,12 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
     if ($_SESSION['permissions'] == 'user') {
                 
         include_once('vue/form_idea.php');
+        include_once('vue/form_idea_modif.php');
+        
         include_once('modele/liste_ideas.php');
         include_once('vue/liste_ideas.php');
         
-        include_once('vue/chat.php');
+        include_once('vue/module_chat.php');
                      
     }
     

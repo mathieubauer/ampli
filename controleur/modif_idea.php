@@ -5,32 +5,20 @@ include_once('../modele/connexion_sql.php');
 
 // VERIFIER LE PROBLEME GET / POST
 
-if($_GET['titre'] == 'null') {
+if(!empty($_GET['id']) && !empty($_GET['titre']) && !empty($_GET['texte'])) {
     
     $id_idea = $_GET['id'];
-    
-    $requete = $bdd->query('SELECT ideaname FROM ampli_ideas WHERE id = ' . $id_idea);
-    $requete->execute();
-    $donnees = $requete->fetch();
-    echo $donnees['ideaname'];    
-    
-    
-} else if(isset($_GET['titre']) && isset($_GET['id']) && !empty($_GET['titre'])) {
-    
     $ideaname = $_GET['titre'];
-    $id_idea = $_GET['id'];
+    $ideatext = $_GET['texte'];
     
-    $requete = $bdd->prepare('UPDATE ampli_ideas SET ideaname = :ideaname WHERE id = :id_idea');
+    $requete = $bdd->prepare('UPDATE ampli_ideas SET ideaname = :ideaname, ideatext = :ideatext WHERE id = :id_idea');
     $requete->execute(array(
         'ideaname' => $ideaname,
+        'ideatext' => $ideatext,
         'id_idea' => $id_idea));
     
-    echo $ideaname;
-    
-} else {
-    
-    echo 'Insérer un titre';
-    
+    $retour = array('ideaname' => $ideaname, 'ideatext' => $ideatext);
+    $retourJson = json_encode($retour);
+    echo $retourJson;
+        
 };
-
-

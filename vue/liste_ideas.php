@@ -49,7 +49,7 @@ while ($donnees = $requete->fetch()) {
 ?>
 
  
-<div class="col-md-3 grid-item">
+<div class="col-md-3 grid-item" id="carte_<?php echo htmlspecialchars($donnees['id']); ?>">
 <div class="grid-item-content">
 
     <div class="card card_idea text-xs-center" id="<?php echo htmlspecialchars($donnees['id']); ?>" >
@@ -62,7 +62,7 @@ while ($donnees = $requete->fetch()) {
 
         <div class="card-block">
             <h3 class="card-title <?php echo $ca ?>" id="titre_<?php echo $donnees['id']; ?>"><?php echo htmlspecialchars($donnees['ideaname']); ?></h3>
-            <p class="card-text"><?php echo htmlspecialchars($donnees['ideatext']); ?></p>
+            <p class="card-text" id="texte_<?php echo $donnees['id']; ?>"><?php echo htmlspecialchars($donnees['ideatext']); ?></p>
             <!-- <a href="index.php?section=like_idea&idea=<?php // echo $donnees['id']; ?>" class="btn btn-primary">J'aime</a> -->
             <button id="like_<?php echo $donnees['id']; ?>" class="btn btn-primary like btn-sm"><?php echo $tl ?></button>
             <?php echo $edit ?>
@@ -77,7 +77,6 @@ while ($donnees = $requete->fetch()) {
 
 </div>
 </div>
-
  
 
 <?php   
