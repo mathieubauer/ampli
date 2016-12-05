@@ -28,6 +28,10 @@ $('.card_idea .edit').click(function() {
                 $('#titre_' + id).html(json.ideaname);
                 $('#texte_' + id).html(json.ideatext); 
                 $('#form_idea_modif').modal('hide');
+                var $grid = $('.grid').packery({
+                itemSelector: '.grid-item'
+                });
+                $grid.packery('shiftLayout');
             },
             error: function() {
                 alert('La requete n\'a pas abouti');
@@ -59,7 +63,6 @@ $('.card_idea .suppr').click(function() {
             url: url,
             success: function() { 
                 $('#form_idea_suppr').modal('hide');
-                //$('#carte_' + id).remove();
                 var $grid = $('.grid').packery({
                 itemSelector: '.grid-item'
                 });

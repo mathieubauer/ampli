@@ -13,8 +13,6 @@
 if (!empty($_POST['ideaname']) && !empty($_POST['ideatext'])) {
     
 
-        
-
     // ################################################# UPLOAD IMAGE
     
     if (is_uploaded_file($_FILES['ideaimg']['tmp_name'])) {
@@ -86,7 +84,7 @@ if (!empty($_POST['ideaname']) && !empty($_POST['ideatext'])) {
     
     $category = $_POST['category'];;
     $id_user = $_SESSION['id'];
-    $likes = 1; 
+    $likes = 0; 
     
     include_once('modele/crea_idea.php');
     //include_once('modele/crea_wp_post.php');

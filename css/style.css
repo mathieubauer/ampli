@@ -1,3 +1,29 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('fonts/SourceSansPro-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    src: url('fonts/SourceSansPro-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    src: url('fonts/SourceSansPro-Semibold.ttf');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: bold;
+    src: url('fonts/SourceSansPro-BoldItalic.ttf');
+}
+
+
+
 body {
     padding: 70px 0;
     background-color: #d5d5d5;
@@ -11,7 +37,12 @@ h1 {
 }
 
 h2 {
+    font-weight: 600;
     margin: 20px 0 10px;
+}
+
+h3 {
+    font-weight: bold;
 }
 
 h4 {

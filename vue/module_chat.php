@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-8 offset-md-2">
     <h1>Des idées d'amélioration ?</h1>
         
     <div class="card">
