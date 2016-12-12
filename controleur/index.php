@@ -12,7 +12,6 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
     // Récupère les information d'un utilisateur
     $username = $_SESSION['username'];
     include_once('modele/info_user.php');
-    
     include_once('vue/header.php');
     
     
@@ -38,16 +37,31 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
     
     // Contenu utilisateur
     if ($_SESSION['permissions'] == 'user') {
+        
+        $requete = $bdd->prepare('SELECT count(id) AS nb_ideas FROM ampli_ideas WHERE id_user = :id_user');
+        $requete->execute(array(
+            'id_user' => $_SESSION['id']));
+        $resultat = $requete->fetch();
+        $nb_ideas = $resultat['nb_ideas'];
+        
+        if ($nb_ideas == 0 && !isset($_SESSION['calltoidea'])) {
+            
+            $_SESSION['calltoidea'] = 1;
+            include_once('vue/call_to_idea.php');
+            
+        } else {
                 
-        include_once('vue/form_idea.php');
-        include_once('vue/form_idea_modif.php');
-        
-        $id_project = $_SESSION['project'];
-        include_once('modele/liste_ideas.php');
-        include_once('vue/liste_ideas.php');
-        
-        // Module fonctionnel mais masqué
-        // include_once('vue/module_chat.php');
+            include_once('vue/form_idea.php');
+            include_once('vue/form_idea_modif.php');
+
+            $id_project = $_SESSION['project'];
+            include_once('modele/liste_ideas.php');
+            include_once('vue/liste_ideas.php');
+
+            // Module fonctionnel mais masqué
+            // include_once('vue/module_chat.php');
+            
+        }
                      
     }
     

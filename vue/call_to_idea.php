@@ -1,17 +1,26 @@
 <div class="row">
+    <div class="col-md-12 text-xs-center">
+        <h1>Hey !</h1>
+        <h3>Vous n'avez encore pas proposé d'idée</h3>
+        <h4>Pourquoi ne pas commencer maintenant ?</h4>
+    </div>
+    
+<!-- Button trigger modal -->
 <div class="col-md-12">
-    <div class="my-3 mx-auto" style="width: 200px;">
-
+    <div class="my-3 mx-auto" style="width: 200px;">    
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="width: 200px;">
         <span class="fa fa-lightbulb-o fa-lg"></span>&nbsp;  Proposer une idée
         </button>
-
     </div>
+    
+    <a href="index.php" type="button" class="btn btn-link col-md-12 text-xs-center" >
+        Non merci, montrez-moi d'abord
+    </a>
 </div>
 </div>
 
 
-<!-- Button trigger modal -->
+
 
 
 <!-- Modal -->

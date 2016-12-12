@@ -38,6 +38,12 @@
         <![endif]-->
         
         <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+        
+        <meta property="og:url"                content="http://ampli.mathieubauer.fr" />
+        <meta property="og:type"               content="article" />
+        <meta property="og:title"              content="L'ampli" />
+        <meta property="og:description"        content="Amplifiez vos idées !" />
+        <meta property="og:image"              content="http://ampli.mathieubauer.fr/img/ampli.png" />
 
         
         
@@ -56,13 +62,16 @@
                 </a>
                 <ul class="nav navbar-nav">
                     <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
+                    <a href="index.php" class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
                     </li>
                     
+                    <?php if (isset($_SESSION['username'])) { ?>
                     <li class="nav-item">
                     <a class="nav-link" href="#">Bienvenue <?php echo $_SESSION['username']; ?></a>
                     </li>
+                    <?php } ?>
                     
+                    <?php if (isset($_SESSION['project_name'])) { ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['project_name']; ?></a>
                         <div class="dropdown-menu" aria-labelledby="responsiveNavbarDropdown">
@@ -70,7 +79,9 @@
                             <a class="dropdown-item" href="index.php?section=project&project=2">Séminaire Interface</a>
                         </div>
                     </li> 
+                    <?php } ?>
                     
+                    <?php if (isset($_SESSION['id'])) { ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mon compte</a>
                         <div class="dropdown-menu" aria-labelledby="responsiveNavbarDropdown">
@@ -79,7 +90,8 @@
                             <!-- <a class="dropdown-item" href="#">Equipe : <?php // echo $resultat['id_team1']; ?></a> -->
                             <a class="dropdown-item" href="index.php?section=deconnexion">Se déconnecter</a>
                         </div>
-                    </li>                  
+                    </li>
+                    <?php } ?>
                 </ul>
 
             </div>
