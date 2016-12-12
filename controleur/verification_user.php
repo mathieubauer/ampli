@@ -17,9 +17,6 @@ $username = $_POST['username'];
 //$password_hache = $_POST['password'];
 
 
-
-
-
 // Appelle la base pour vérifier les correspondances
 // Renvoie $resultat (fetch de la requête avec id et id_groupe)
 include_once('modele/verification_user.php');

@@ -15,41 +15,60 @@
         </div>
 
         <div class="row">
-                <div class="col-lg-12"><h3>Amplifier cette idée ?</h3><hr></div>
+            <div class="col-lg-12"><h3>Amplifier cette idée ?</h3><hr></div>
+            
+            <?php if (!isset($_SESSION['id'])) { ?>
+            
+                <div class="col-lg-12"><p>Pour amplifier cette idée, veuillez vous connecter</p></div>
+                
+                <div class="col-lg-12">
+                <a href="index.php" class="btn btn-primary" style="width: 100%;" ><span class="fa fa-sign-in"></span> Connexion</a>
+                </div>
+            
+                <div class="col-lg-12">
+                <button class="btn btn-primary disabled" style="width: 100%;" ><span class="fa fa-heart"></span> J'aime</button>
+                </div>
+            
+                <div class="col-lg-12">
+                <button class="btn btn-primary disabled" style="width: 100%;" ><span class="fa fa-users"></span> Je contribue</button>
+                </div>
+            
+            <?php } else { ?>
 
-                <?php if ($button_like == 0) { ?>
-                    <div class="col-lg-12">
-                    <button id="like_<?php echo ($donnees['id']); ?>" class="btn btn-primary unliked" style="width: 100%;" >
-                    <span class="fa fa-heart"></span> J'aime !
-                    </button>
-                    </div>
-                <?php } else { ?>
-                    <div class="col-lg-12">
-                    <button id="like_<?php echo ($donnees['id']); ?>" class="btn btn-primary liked" style="width: 100%;" >
-                    <span class="fa fa-heart-o"></span> Je n'aime plus
-                    </button>
-                    </div>
-                <?php } ?>
+            <?php if ($button_like == 0) { ?>
+                <div class="col-lg-12">
+                <button id="like_<?php echo ($donnees['id']); ?>" class="btn btn-primary unliked" style="width: 100%;" >
+                <span class="fa fa-heart"></span> J'aime !
+                </button>
+                </div>
+            <?php } else { ?>
+                <div class="col-lg-12">
+                <button id="like_<?php echo ($donnees['id']); ?>" class="btn btn-primary liked" style="width: 100%;" >
+                <span class="fa fa-heart-o"></span> Je n'aime plus
+                </button>
+                </div>
+            <?php } ?>
 
-                <?php if ($button_contribute == 0) { ?>
-                    <div class="col-lg-12">
-                    <button id="contribute_<?php echo ($donnees['id']); ?>" class="btn btn-primary" data-toggle="modal" data-target="#modalContribution" style="width: 100%;" >
-                    <span class="fa fa-users"></span> Je contribue !
-                    </button>
-                    </div> 
-                <?php } ?>
+            <?php if ($button_contribute == 0) { ?>
+                <div class="col-lg-12">
+                <button id="contribute_<?php echo ($donnees['id']); ?>" class="btn btn-primary" data-toggle="modal" data-target="#modalContribution" style="width: 100%;" >
+                <span class="fa fa-users"></span> Je contribue !
+                </button>
+                </div> 
+            <?php } ?>
 
-                <?php if ($button_portage == 0) { ?>
-                    <div class="col-lg-12">
-                    <button class="btn btn-primary" id="bouton_portage" data-toggle="modal" data-target="#modalPortage" style="width: 100%;" >
-                    <span class="fa fa-hand-pointer-o"></span> Je porte !
-                    </button>
-                    </div>
-                <?php } ?>
+            <?php if ($button_portage == 0) { ?>
+                <div class="col-lg-12">
+                <button class="btn btn-primary" id="bouton_portage" data-toggle="modal" data-target="#modalPortage" style="width: 100%;" >
+                <span class="fa fa-hand-pointer-o"></span> Je porte !
+                </button>
+                </div>
+            <?php } ?>
+            
+            <?php } ?>
 
-                <div class="col-lg-12"><p>Pour partager cette idée, copiez et envoyez l'url !</p></div>
-
-            </div>
+            <div class="col-lg-12"><p>Pour partager cette idée, copiez et envoyez l'url !</p></div>
+        </div>
 
     </div>
     
