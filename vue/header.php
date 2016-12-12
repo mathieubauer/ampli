@@ -22,7 +22,9 @@
         
         <link rel="icon" type="image/png" href="img/favicon.png" />
         
+        <!-- A remettre quand travail en ligne
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" /> 
+        -->
 
         
         <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet"> --> 
@@ -62,11 +64,19 @@
                     </li>
                     
                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['project_name']; ?></a>
+                        <div class="dropdown-menu" aria-labelledby="responsiveNavbarDropdown">
+                            <a class="dropdown-item" href="index.php?section=project&project=1">Bêta</a>
+                            <a class="dropdown-item" href="index.php?section=project&project=2">Séminaire Interface</a>
+                        </div>
+                    </li> 
+                    
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mon compte</a>
                         <div class="dropdown-menu" aria-labelledby="responsiveNavbarDropdown">
                             <a class="dropdown-item" href="#">Score : <?php echo $resultat['score']; ?></a>
-                            <a class="dropdown-item" href="#"><?php echo $resultat['likes']; ?> like(s) à distribuer</a>
-                            <a class="dropdown-item" href="#">Equipe : <?php echo $resultat['id_team1']; ?></a>
+                            <!-- <a class="dropdown-item" href="#"><?php // echo $resultat['likes']; ?> like(s) à distribuer</a> -->
+                            <!-- <a class="dropdown-item" href="#">Equipe : <?php // echo $resultat['id_team1']; ?></a> -->
                             <a class="dropdown-item" href="index.php?section=deconnexion">Se déconnecter</a>
                         </div>
                     </li>                  

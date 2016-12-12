@@ -1,8 +1,6 @@
 <div class="row gutter-10">  
 <div class="grid"> 
-    
-    <div class="grid-sizer col-md-3"></div>
-    
+        
 <?php  
     
     $id_user = $_SESSION['id'];                             // id de l'utilisateur connecté   
@@ -30,8 +28,8 @@
         if (!$resultat) { $edit_auteur = '';
         } else { 
             $edit_auteur = '
-            <button class="btn btn-link btn-sm edit"><span class="fa fa-pencil"></button>
-            <button class="btn btn-link btn-sm suppr"><span class="fa fa-trash"></span></button>';
+            <button class="btn btn-circle edit"><span class="fa fa-pencil"></button>
+            <button class="btn btn-circle suppr"><span class="fa fa-trash"></span></button>';
         }
         
         return $edit_auteur;
@@ -54,7 +52,7 @@ while ($donnees = $requete->fetch()) {
 
     <div class="card card_idea text-xs-center" id="<?php echo htmlspecialchars($donnees['id']); ?>" >
     
-        <div class="card-header"><?php echo htmlspecialchars($donnees['category']); ?></div>
+            <div class="card-header"><?php echo htmlspecialchars($donnees['category']); ?></div>
 
         <?php if ($donnees['ideaimg'] != "") { ?>    
         <img src="<?php echo $donnees['ideaimg']; ?>" alt="Card image" width="100%" height="100%">
@@ -69,8 +67,19 @@ while ($donnees = $requete->fetch()) {
         </div>
 
         <div class="card-footer text-muted">
-        <span>Auteur : <?php echo $donnees['username']; ?></span></br>
-        <cite id="nblike_<?php echo $donnees['id']; ?>">Likes : <?php echo $donnees['likes']; ?></cite>
+            <a href="index.php?section=user&user=<?php echo $donnees['username']; ?>" class="author_link">
+                <span class="fa fa-user"></span>
+                <span><?php echo $donnees['username']; ?></span>
+            </a>
+            <span id="nblike_<?php echo $donnees['id']; ?>" class="like_count">
+                <?php echo $donnees['likes']; ?>
+                <span class="fa fa-heart"></span>
+            </span>
+            <span class="bouton_ampli">
+                <a href="index.php?section=idea&idea=<?php echo htmlspecialchars($donnees['id']); ?>">
+                    <img src="img/favicon.png" alt="ampli" width="22px">
+                </a>
+            </span>
         </div>
 
     </div>

@@ -9,10 +9,10 @@ if (isset($info)) {
 // Vérifie si une session est ouverte
 if (isset($_SESSION['id']) AND isset($_SESSION['username'])) { 
     
-      
     // Récupère les information d'un utilisateur
     $username = $_SESSION['username'];
     include_once('modele/info_user.php');
+    
     include_once('vue/header.php');
     
     
@@ -25,13 +25,12 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
         include_once('vue/form_idea.php');
         include_once('vue/form_idea_modif.php');
         
+        $id_project = $_SESSION['project'];
         include_once('modele/liste_ideas.php');
         include_once('vue/liste_ideas.php');
         
         include_once('vue/module_chat.php');
-        
-        
-        
+            
         // include_once('modele/liste_posts.php');
         // include_once('vue/liste_posts.php');
              
@@ -43,10 +42,12 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
         include_once('vue/form_idea.php');
         include_once('vue/form_idea_modif.php');
         
+        $id_project = $_SESSION['project'];
         include_once('modele/liste_ideas.php');
         include_once('vue/liste_ideas.php');
         
-        include_once('vue/module_chat.php');
+        // Module fonctionnel mais masqué
+        // include_once('vue/module_chat.php');
                      
     }
     

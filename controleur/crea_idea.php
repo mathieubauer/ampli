@@ -71,7 +71,7 @@ if (!empty($_POST['ideaname']) && !empty($_POST['ideatext'])) {
     
     
    
-    // #################################################    
+    // INSERTION BDD #################################################    
     
     $ideaname = $_POST['ideaname'];
     $ideatext = $_POST['ideatext'];
@@ -85,6 +85,7 @@ if (!empty($_POST['ideaname']) && !empty($_POST['ideatext'])) {
     $category = $_POST['category'];;
     $id_user = $_SESSION['id'];
     $likes = 0; 
+    $id_project = $_SESSION['project'];
     
     include_once('modele/crea_idea.php');
     //include_once('modele/crea_wp_post.php');

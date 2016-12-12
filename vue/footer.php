@@ -13,6 +13,7 @@
 <script src="js/chat.js"></script>
 <script src="js/like.js"></script>
 <script src="js/modif_idea.js"></script>
+<script src="js/contribution.js"></script>
 
 <script src="js/jquery.showmore.min.js"></script>
 <script src="js/voirplus.js"></script>

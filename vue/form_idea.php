@@ -39,9 +39,14 @@
 
                 <label for="category">Catégorie</label>
                 <select class="form-control" name="category" id="category">
-                <option>Rêve</option>
-                <option>Mise en oeuvre</option>
-                <option>Projet</option>
+                    <?php if($_SESSION['project'] == 1) { ?>
+                        <option>Rêve</option>
+                        <option>Mise en oeuvre</option>
+                        <option>Projet</option>
+                    <?php } else if($_SESSION['project'] == 2) { ?>
+                        <option>Boulot</option>
+                        <option>Repas</option>
+                    <?php } ?>
                 </select><br>
 
                 <label for="ideaimg">Illustration (facultatif)</label>

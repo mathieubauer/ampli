@@ -10,13 +10,13 @@
     <img src="img/ds_450x150.png" alt="D-Sides" width="200">
 
     <div class="input-group">
-    <span class="input-group-addon">?</span></span>
+    <span class="input-group-addon"><span class="fa fa-user fa-lg"></span></span></span>
     <input type="text" name="username" id="username" class="form-control" placeholder="Identifiant" />
     </div>
     <br>
 
     <div class="input-group">
-    <span class="input-group-addon">?</span></span>
+    <span class="input-group-addon"><span class="fa fa-lock fa-lg"></span></span></span>
     <input type="password" name="password" id="password" class="form-control" placeholder="Mot de passe" />
     </div>
     <br>

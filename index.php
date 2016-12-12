@@ -58,6 +58,20 @@ if (!isset($_GET['section']) OR $_GET['section'] == 'index') { // page d'accueil
     include_once('controleur/index.php');
 }
 
+// Sections de l'ampli #################################################################
+
+if ($_GET['section'] == 'user') {
+    include_once('controleur/user.php'); // vers les pages utilisateurs
+}
+
+if ($_GET['section'] == 'idea') {
+    include_once('controleur/idea.php'); 
+}
+
+if ($_GET['section'] == 'project') {
+    include_once('controleur/project.php'); 
+}
+
 
 
 

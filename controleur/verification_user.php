@@ -35,7 +35,9 @@ if (!$resultat) {
     session_start();
     $_SESSION['id'] = $resultat['id'];
     $_SESSION['permissions'] = $resultat['permissions'];
-    $_SESSION['username'] = $username;  
+    $_SESSION['username'] = $username;
+    $_SESSION['project'] = 2;
+    $_SESSION['project_name'] = 'Séminaire Interface';
         
     header('Location: index.php');
 }
