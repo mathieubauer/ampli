@@ -2,7 +2,7 @@
 
 <div class="row">
 <div class="col-md-6 offset-md-3">
-<div class="card">
+<div class="card connexion_form">
 <div class="card-block">
 
     <form method="post" action="index.php?section=verification_user" class="form-horizontal">

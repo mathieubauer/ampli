@@ -5,11 +5,11 @@ include_once('../modele/connexion_sql.php');
 
 // VERIFIER LE PROBLEME GET / POST
 
-if(!empty($_GET['id']) && !empty($_GET['titre']) && !empty($_GET['texte'])) {
+if(!empty($_POST['id']) && !empty($_POST['titre']) && !empty($_POST['texte'])) {
     
-    $id_idea = $_GET['id'];
-    $ideaname = $_GET['titre'];
-    $ideatext = $_GET['texte'];
+    $id_idea = $_POST['id'];
+    $ideaname = $_POST['titre'];
+    $ideatext = nl2br($_POST['texte']);
     
     $requete = $bdd->prepare('UPDATE ampli_ideas SET ideaname = :ideaname, ideatext = :ideatext WHERE id = :id_idea');
     $requete->execute(array(

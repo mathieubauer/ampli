@@ -23,20 +23,20 @@ if ($_GET['info'] == 'login_ok') {
 }
 
 if ($_GET['info'] == 'todo_ok') {
-    $info = "<p>La tâche a été crée avec succès.</p>";
+    $info = "La tâche a été crée avec succès.";
     include_once('controleur/index.php');
 }
 
 if ($_GET['info'] == 'raz_score') {
-    $info = "<p>Les résultats ont été remis à zéro.</p>";
+    $info = "Les résultats ont été remis à zéro.";
 }
 
 if ($_GET['info'] == 'err_login') {
-    $info = "<p>Le login et/ou le mot de passe est erronné.</p>";
+    $info = "Le login et/ou le mot de passe est erronné.";
 }
 
 if ($_GET['info'] == 'err_crea') {
-    $info = "<p>Une erreur est survenue, merci de recommencer.</p>";
+    $info = "Une erreur est survenue, merci de recommencer.";
 }
 
 if ($_GET['info'] == 'suppr_user') {

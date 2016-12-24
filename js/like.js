@@ -1,3 +1,5 @@
+/*
+
 $('.like').click(function() {
     
     var id_button = $(this).attr("id");                 // récupère un id de type like_00
@@ -47,6 +49,8 @@ $('.like').click(function() {
       
 });
 
+*/
+
 
 // LIKE AVEC DES CLASSES DIFFERENTES ####################
 
@@ -68,9 +72,8 @@ $(document).on('click', '.unliked', function() {
             $('#nblikes_' + id).html(data);
             $('#' + id_button).addClass('liked');
             $('#' + id_button).removeClass('unliked');
-            $('#' + id_button).html('<span class="fa fa-heart-o"></span> Je n\'aime plus');
+            $('#' + id_button).html('<span class="fa fa-heart"></span>');
             
-              
         },
         
         error: function () {
@@ -96,7 +99,7 @@ $(document).on('click', '.liked', function() {
         url: url,
         success: function(data) {
             
-            $('#' + id_button).html('<span class="fa fa-heart"></span> J\'aime');
+            $('#' + id_button).html('<span class="fa fa-heart-o"></span>');
             $('#nblikes_' + id).html(data);
             $('#' + id_button).removeClass("liked");
             $('#' + id_button).addClass('unliked');

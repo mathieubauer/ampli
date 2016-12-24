@@ -1,11 +1,11 @@
-$('.card_idea .edit').click(function() {
+$('.edit').on('click', function() {
     
     var id_button = $(this).parent().parent().attr("id"); 
     var id = id_button
     
     var contenu_titre = $('#titre_' + id).html();               // .val() serait peut-être plus opportun ?
-    var contenu_texte = $('#texte_' + id).html();
-        
+    var contenu_texte = $('#texte_' + id).text();
+            
     // Modification du formulaire / modal
     $('#ideaname_modif').attr('value', contenu_titre);
     $('#ideatext_modif').html(contenu_texte);
@@ -14,15 +14,18 @@ $('.card_idea .edit').click(function() {
     $('#form_idea_modif').modal('show');
     
     // A la validation de la modification
-    $('#form_idea_modif_envoi').click(function() {
-             
+    $('#form_idea_modif_envoi').one('click', function() {       // one ! sinon agit plusieurs fois (je ne sais pas pourquoi)
+                     
         var nouveauTitre = $('#ideaname_modif').val();
         var nouveauTexte = $('#ideatext_modif').val();
-              
-        var url = 'controleur/modif_idea.php?titre=' + nouveauTitre + '&texte=' + nouveauTexte + '&id=' + id;
+                      
+        // var url = 'controleur/modif_idea.php?titre=' + nouveauTitre + '&texte=' + nouveauTexte + '&id=' + id;
+        var url = 'controleur/modif_idea.php';
                 
         $.ajax({
             url: url,
+            type: 'POST',
+            data: 'titre=' + nouveauTitre + '&texte=' + nouveauTexte + '&id=' + id,
             dataType: 'json',
             success: function(json) {
                 $('#titre_' + id).html(json.ideaname);
@@ -39,7 +42,12 @@ $('.card_idea .edit').click(function() {
         });
         
     });
-        
+    
+    /*
+    $('#ideaname_modif').removeAttr('value');
+    $('#ideatext_modif').val('');
+    delete contenu_texte; */
+
 });
 
 
