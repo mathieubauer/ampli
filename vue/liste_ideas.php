@@ -78,14 +78,14 @@ while ($donnees = $requete->fetch()) {
         <!-- FOOTER CARTE -->
         <div class="card-footer text-muted">
             
-            <div class="col-md-6">
+            <div class="col-xs-6">
                 <a href="index.php?section=user&user=<?php echo $donnees['username']; ?>" class="author_link">
                     <span class="fa fa-user"></span>
                     <span><?php echo $donnees['username']; ?></span>
                 </a>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-xs-3">
                 <span class="bouton_ampli">
                     <a href="index.php?section=idea&idea=<?php echo htmlspecialchars($donnees['id']); ?>">
                     <img src="img/favicon.png" alt="ampli" width="22px">
@@ -93,7 +93,7 @@ while ($donnees = $requete->fetch()) {
                 </span>
             </div>
             
-            <div class="col-md-3 card_likes">
+            <div class="col-xs-3 card_likes">
                 <span id="nblikes_<?php echo $donnees['id']; ?>" class="like_count">
                     <?php echo $donnees['likes']; ?>
                 </span>

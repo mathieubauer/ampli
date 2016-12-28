@@ -19,6 +19,7 @@
 <script src="js/voirplus.js"></script>
 
 <script src="js/packery.pkgd.js"></script>
+<script src="js/imagesloaded.pkgd.js"></script>
 <script src="js/grille.js"></script>
 
 

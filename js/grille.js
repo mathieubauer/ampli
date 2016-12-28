@@ -1,12 +1,18 @@
-$(function() {
+//$(function() {
+//$(window).load(function() {
+$(document).ready(function(){
+//jQuery(window).load(function(){
+
     
     var $grid = $('.grid').packery({
-    // options
-    itemSelector: '.grid-item',
+        // options
+        itemSelector: '.grid-item',
     });
-    
+       
     $grid.imagesLoaded().progress( function() {
         $grid.packery();
+        //$grid.packery('layout');
+        //$grid.packery('reloadItems');
     });
     
     
