@@ -46,12 +46,22 @@
                     <?php } else if($_SESSION['project'] == 2) { ?>
                         <option>Boulot</option>
                         <option>Détente</option>
+                    <?php } else if($_SESSION['project'] == 3) { ?>
+                        <option value=0>Sélectionner une catégorie</option>    
+                        <option value=1>L'identité / La marque du club / La communication</option>
+                        <option value=2>Les infrastructures / Les salles</option>
+                        <option value=3>L'arbitrage</option>
+                        <option value=4>L'aspect technique handball / La performance sportive</option>
+                        <option value=5>L'animation écoles et le tournoi des écoles / L'ancrage territorial</option>
+                        <option value=6>La citoyenneté</option>
+                        <option value=7>La convivialité</option>
+                        <option value=8>La recherche de financements</option>
                     <?php } ?>
                 </select><br>
 
-                <label for="ideaimg">Illustration (facultatif)</label>
+                <label for="ideaimg">Image d'illustration (facultatif)</label>
                 <input type="file" name="ideaimg" id="ideaimg" class="form-control" /> <!-- Upload de fichier -->
-                <input type="hidden" name="MAX_FILE_SIZE" value="10485760" /> <!-- 10 Mo -->
+                <input type="hidden" name="MAX_FILE_SIZE" value="12582912" /> <!-- Valeur en octets = 12 Mo -->
                 
             </div>
             

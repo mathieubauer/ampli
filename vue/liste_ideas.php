@@ -58,11 +58,11 @@ while ($donnees = $requete->fetch()) {
 
         <!-- IMAGE CARTE -->
         <?php if ($donnees['ideaimg'] != "") { ?>    
-        <img src="<?php echo $donnees['ideaimg']; ?>" alt="Card image" width="100%" height="100%">
+        <img src="<?php echo $donnees['ideaimg']; ?>" alt="Card image" width="100%" height="100%" class="card-img-top">
         <?php } else if (!empty($donnees['category'])) { ?> 
-        <img src="img/placeholder/<?php echo $donnees['category']; ?>.png" alt="Card image" width="100%" height="100%">
+        <img src="img/placeholder/<?php echo $donnees['id_project'] . '_' . $donnees['category']; ?>.png" alt="Card image" width="100%" height="100%" class="card-img-top">
         <?php } else { ?> 
-        <img src="img/placeholder/default.png" alt="Card image" width="100%" height="100%">
+        <img src="img/placeholder/default.png" alt="Card image" width="100%" height="100%" class="card-img-top">
         <?php } ?>
 
         <!-- TEXTE CARTE -->
@@ -85,22 +85,20 @@ while ($donnees = $requete->fetch()) {
                 </a>
             </div>
             
-            <div class="col-md-3 card_likes">
-                <span id="nblikes_<?php echo $donnees['id']; ?>" class="like_count">
-                    <?php echo $donnees['likes']; ?>
-                </span>
-                    
-                <button id="like_<?php echo $donnees['id']; ?>" <?php echo $tl ?></button>
-
-                
-            </div>
-            
             <div class="col-md-3">
                 <span class="bouton_ampli">
                     <a href="index.php?section=idea&idea=<?php echo htmlspecialchars($donnees['id']); ?>">
                     <img src="img/favicon.png" alt="ampli" width="22px">
                     </a>
                 </span>
+            </div>
+            
+            <div class="col-md-3 card_likes">
+                <span id="nblikes_<?php echo $donnees['id']; ?>" class="like_count">
+                    <?php echo $donnees['likes']; ?>
+                </span>
+                    
+                <button id="like_<?php echo $donnees['id']; ?>" <?php echo $tl ?></button>  
             </div>
             
             

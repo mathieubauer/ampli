@@ -6,19 +6,18 @@
     </div>
     
 <!-- Button trigger modal -->
-<div class="col-md-12">
-    <div class="my-3 mx-auto" style="width: 200px;">    
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="width: 200px;">
-        <span class="fa fa-lightbulb-o fa-lg"></span>&nbsp;  Proposer une idée
-        </button>
+    <div class="col-md-12">
+        <div class="my-3 mx-auto" style="width: 200px;">    
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="width: 200px;">
+            <span class="fa fa-lightbulb-o fa-lg"></span>&nbsp;  Proposer une idée
+            </button>
+        </div>
     </div>
-    
-    <a href="index.php" type="button" class="btn btn-link col-md-12 text-xs-center" >
-        Non merci, montrez-moi d'abord
-    </a>
-</div>
 </div>
 
+<div class="text-xs-center">
+    <a href="index.php">Non merci, montrez-moi d'abord</a>
+</div>
 
 
 

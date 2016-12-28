@@ -74,12 +74,13 @@ p {
     color: #aaa;
 }
 
-.navbar .navbar-brand, .navbar-default .navbar-text {
+.navbar .navbar-brand, 
+.navbar .navbar-brand:visited, 
+.navbar .navbar-brand:hover, 
+.navbar-default 
+.navbar-text {
     color: #fff;
-}
-
-.nav-link {
-    color: #fff;
+    cursor: default;
 }
 
 
@@ -121,6 +122,10 @@ p {
 }
 
 /* ########## Design des Cards ########## */
+
+.card_idea .card_img_top {
+    max-height: 600px;
+}
 
 .card h3 {
     font-size: 20px;

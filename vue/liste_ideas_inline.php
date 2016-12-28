@@ -20,7 +20,7 @@
     <tr>
         <td><?php echo htmlspecialchars($donnees['ideaname']); ?></td>
         <td><?php echo $donnees['ideatext']; ?></td>
-        <td><img src="<?php echo $donnees['ideaimg']; ?>" width="100%"/></td>
+        <td><img src="<?php echo $donnees['ideaimg']; ?>" width="20%"/></td>
         <td><?php echo $donnees['category']; ?></td>
         <td><?php echo $donnees['likes']; ?></td>
         <td><?php echo $donnees['username']; ?></td>

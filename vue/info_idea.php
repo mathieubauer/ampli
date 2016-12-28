@@ -5,7 +5,7 @@
     <div class="col-lg-4">
 
     <?php if ($donnees['ideaimg'] != "") { ?>    
-    <img src="<?php echo $donnees['ideaimg']; ?>" alt="Card image" width="100%" height="">
+    <img src="<?php echo str_replace('_modified_', '_original_', $donnees['ideaimg']) ; ?>" alt="Card image" width="100%" height="">
     <?php } ?>
 
         <div class="my-3 mx-auto" style="width: 200px;">

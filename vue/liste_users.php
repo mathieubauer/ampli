@@ -6,7 +6,7 @@
         <th>Identifiant</th>
         <th>Email</th>
         <th>Permissions</th>
-        <th>Equipe</th>
+        <th>Projet</th>
         <th>Région</th>
         <th>Score</th>
         <th>Likes</th>
@@ -22,7 +22,7 @@
         <td><?php echo htmlspecialchars($donnees['username']); ?></td>
         <td><?php echo htmlspecialchars($donnees['email']); ?></td>
         <td><?php echo $donnees['permissions']; ?></td>
-        <td><?php echo $donnees['id_team1']; ?></td>
+        <td><?php echo $donnees['id_project_default']; ?></td>
         <td><?php echo $donnees['id_team2']; ?></td>
         <td><?php echo $donnees['score']; ?></td>
         <td><?php echo $donnees['likes']; ?></td>

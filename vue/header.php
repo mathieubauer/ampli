@@ -67,22 +67,25 @@
                     
                     <?php if (isset($_SESSION['username'])) { ?>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Bienvenue <?php echo $_SESSION['username']; ?></a>
+                    <a class="nav-link non_cliquable" href="#">Bienvenue <?php echo $_SESSION['username']; ?></a>
                     </li>
                     <?php } ?>
                     
                     <?php if (isset($_SESSION['project_name'])) { ?>
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['project_name']; ?></a>
                         <div class="dropdown-menu" aria-labelledby="responsiveNavbarDropdown">
                             <a class="dropdown-item" href="index.php?section=project&project=1">Bêta</a>
                             <a class="dropdown-item" href="index.php?section=project&project=2">Séminaire Interface</a>
                         </div>
-                    </li> 
+                    </li> -->
+                    <li class="nav-item">
+                    <a class="nav-link non_cliquable" href="#"><?php echo $_SESSION['project_name']; ?></a>
+                    </li>
                     <?php } ?>
                     
                     <?php if (isset($_SESSION['id'])) { ?>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown float-xs-right">
                         <a class="nav-link dropdown-toggle" href="#" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mon compte</a>
                         <div class="dropdown-menu" aria-labelledby="responsiveNavbarDropdown">
                             <a class="dropdown-item" href="#">Score : <?php echo $resultat['score']; ?></a>

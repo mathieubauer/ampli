@@ -33,8 +33,8 @@ if (!$resultat) {
     $_SESSION['id'] = $resultat['id'];
     $_SESSION['permissions'] = $resultat['permissions'];
     $_SESSION['username'] = $username;
-    $_SESSION['project'] = 2;
-    $_SESSION['project_name'] = 'Séminaire Interface';
+    $_SESSION['project'] = $resultat['id_project_default'];
+    $_SESSION['project_name'] = $resultat['name_project_default'];
         
     header('Location: index.php');
 }
