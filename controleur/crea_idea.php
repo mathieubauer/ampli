@@ -184,9 +184,11 @@ if (!empty($_POST['ideaname']) && !empty($_POST['ideatext'])) {
    
     // INSERTION BDD #################################################    
     
-    $ideaname = $_POST['ideaname'];
-    $ideatext = $_POST['ideatext'];
+    $ideaname = $_POST['ideaname']; 
     
+    $ideatext = $_POST['ideatext']; 
+    $ideatext = nl2br($ideatext);
+            
     if(isset($target_file)) { 
         $ideaimg = $pic_name_modified; 
     } else {

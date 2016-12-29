@@ -18,6 +18,7 @@ $('.edit').on('click', function() {
                      
         var nouveauTitre = $('#ideaname_modif').val();
         var nouveauTexte = $('#ideatext_modif').val();
+        var nouveauTexteEncode = encodeURIComponent(nouveauTexte);
                       
         // var url = 'controleur/modif_idea.php?titre=' + nouveauTitre + '&texte=' + nouveauTexte + '&id=' + id;
         var url = 'controleur/modif_idea.php';
@@ -25,7 +26,7 @@ $('.edit').on('click', function() {
         $.ajax({
             url: url,
             type: 'POST',
-            data: 'titre=' + nouveauTitre + '&texte=' + nouveauTexte + '&id=' + id,
+            data: 'titre=' + nouveauTitre + '&texte=' + nouveauTexteEncode + '&id=' + id,
             dataType: 'json',
             success: function(json) {
                 $('#titre_' + id).html(json.ideaname);

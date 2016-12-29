@@ -53,6 +53,14 @@ p {
     font-size: 15px;
 }
 
+a {
+    color: #202E42;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 
 .idee {
     margin: 40px;
@@ -224,6 +232,18 @@ p {
 .idee_page .btn-primary {
     margin: 6px 0;
 }
+
+#container_contributions .card-footer {
+    padding: 10px 20px;
+}
+
+/* ########## Page utilisateur ########## */
+
+.hr_thin {
+    margin: 0;
+}
+
+/* ########## Boutons ########## */
 
 
 .btn-circle {

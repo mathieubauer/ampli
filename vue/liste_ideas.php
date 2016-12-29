@@ -88,7 +88,9 @@ while ($donnees = $requete->fetch()) {
             <div class="col-xs-3">
                 <span class="bouton_ampli">
                     <a href="index.php?section=idea&idea=<?php echo htmlspecialchars($donnees['id']); ?>">
-                    <img src="img/favicon.png" alt="ampli" width="22px">
+                    <?php echo $donnees['contributions']; ?> 
+                    <span class="fa fa-comments"></span>
+                    <!--    <img src="img/favicon.png" alt="ampli" width="22px"> -->
                     </a>
                 </span>
             </div>

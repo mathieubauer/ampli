@@ -55,6 +55,14 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
             include_once('vue/form_idea_modif.php');
 
             $id_project = $_SESSION['project'];
+            
+            /*
+            $requete = $bdd->prepare('SELECT count(id) AS nb_ideas FROM ampli_ideas WHERE id_user = :id_user');
+            $requete->execute(array('id_user' => $_SESSION['id']));
+            $resultat = $requete->fetch();
+            $nb_ideas = $resultat['nb_ideas'];
+            */
+            
             include_once('modele/liste_ideas.php');
             include_once('vue/liste_ideas.php');
 

@@ -67,7 +67,7 @@
                     
                     <?php if (isset($_SESSION['username'])) { ?>
                     <li class="nav-item">
-                    <a class="nav-link non_cliquable" href="#">Bienvenue <?php echo $_SESSION['username']; ?></a>
+                    <a class="nav-link non_cliquable" href="index.php">Bienvenue <?php echo $_SESSION['username']; ?></a>
                     </li>
                     <?php } ?>
                     
@@ -80,7 +80,7 @@
                         </div>
                     </li> -->
                     <li class="nav-item">
-                    <a class="nav-link non_cliquable" href="#"><?php echo $_SESSION['project_name']; ?></a>
+                    <a class="nav-link non_cliquable" href="index.php"><?php echo $_SESSION['project_name']; ?></a>
                     </li>
                     <?php } ?>
                     
@@ -88,7 +88,7 @@
                     <li class="nav-item dropdown float-xs-right">
                         <a class="nav-link dropdown-toggle" href="#" id="responsiveNavbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mon compte</a>
                         <div class="dropdown-menu" aria-labelledby="responsiveNavbarDropdown">
-                            <a class="dropdown-item" href="#">Score : <?php echo $resultat['score']; ?></a>
+                            <!-- <a class="dropdown-item" href="#">Score : <?php echo $resultat['score']; ?></a> -->
                             <!-- <a class="dropdown-item" href="#"><?php // echo $resultat['likes']; ?> like(s) à distribuer</a> -->
                             <!-- <a class="dropdown-item" href="#">Equipe : <?php // echo $resultat['id_team1']; ?></a> -->
                             <a class="dropdown-item" href="index.php?section=deconnexion">Se déconnecter</a>

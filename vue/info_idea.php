@@ -92,7 +92,7 @@
             </div>  
 
             <div class="card-footer">
-            <div class="col-lg-4">proposée par <?php echo ($donnees['author']); ?></div>
+            <div class="col-lg-4">proposée par <a href="index.php?section=user&user=<?php echo ($donnees['author']); ?>"><?php echo ($donnees['author']); ?></a> </div>
             <div class="col-lg-4">portée par <span id="porteur"><?php echo $porteur; ?></span></div>
             <div class="col-lg-2"><span id="nblikes_<?php echo ($donnees['id']); ?>"><?php echo ($donnees['likes']); ?></span> <span class="fa fa-heart"></span></div>
             <div class="col-lg-2"><span id="nbcontributions_<?php echo ($donnees['id']); ?>"><?php echo $nbContributions; ?></span> <span class="fa fa-users"></span></div>
@@ -102,17 +102,28 @@
         </div>
         <br>
 
-        <div class="row" id="container_contributions">
-            <div class="col-lg-10 offset-lg-1"><h3>Contributions</h3><hr></div>
+        <div id="container_contributions" class="card">
+            <div class="card-header">
+                Contributions
+            </div>
+            
+            
+            
+            
+            
 
             <?php 
             while ($contributions = $requete->fetch()) {
             ?>
-                <div class="col-lg-3 offset-lg-1"><span class="fa fa-user"></span> <?php echo ($contributions['author']); ?></div>
+            <div class="card-footer">
+                <div class="col-lg-3"><span class="fa fa-user"></span> <?php echo ($contributions['author']); ?></div>
                 <div class="col-lg-7"><?php echo ($contributions['contribution']); ?></div>
+            </div>
             <?php } ?>
+        
+        </div>
 
-        </div>                
+            
 
     </div>
     
