@@ -24,7 +24,7 @@
         <td><?php echo $donnees['category']; ?></td>
         <td><?php echo $donnees['likes']; ?></td>
         <td><?php echo $donnees['username']; ?></td>
-        <td><a href="index.php?section=suppression_idea&idea=<?php echo $donnees['id']; ?>">X</a></td>
+        <td><a href="index.php?section=suppression_idea&idea=<?php echo $donnees['id']; ?>"><span class="fa fa-trash"></span></a></td>
     </tr>
     
     <?php

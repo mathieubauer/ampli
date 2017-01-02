@@ -16,7 +16,7 @@
     <tr>
         <td><?php echo $donnees['id']; ?></td>
         <td><?php echo $donnees['name']; ?></td>
-        <td><a href="#" class="disabled">X</a></td>
+        <td><a href="#" class="disabled"><span class="fa fa-trash"></span></a></td>
     </tr>
     
     <?php

@@ -10,7 +10,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
       
     // Récupère les information d'un utilisateur
     $username = $_SESSION['username'];
-    include_once('modele/info_user.php');
+    include_once('modele/info_user.php'); 
     include_once('vue/header.php');
     
     
@@ -48,9 +48,6 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
                 
         $requete = $bdd->prepare('SELECT * FROM ampli_users WHERE username = ?');
         $requete->execute(array($username));
-        
-        $requete0 = $bdd->query('SELECT COUNT(*) FROM chat_messages ORDER BY id ASC LIMIT 0, 15');
-$donnees0 = $requete0->fetch();
 
         $fin = $nb_ideas;
         $debut = max(0, $fin - 5);

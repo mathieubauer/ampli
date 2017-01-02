@@ -28,7 +28,7 @@
         <!-- <td><?php echo $donnees['id_team2']; ?></td> -->
         <!-- <td><?php echo $donnees['score']; ?></td> -->
         <!-- <td><?php echo $donnees['likes']; ?></td> -->
-        <td><a href="index.php?section=suppression_user&user=<?php echo $donnees['id']; ?>">X</a></td>
+        <td><a href="index.php?section=suppression_user&user=<?php echo $donnees['id']; ?>"><span class="fa fa-trash"></span></a></td>
     </tr>
     
     <?php
