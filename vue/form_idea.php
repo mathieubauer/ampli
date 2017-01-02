@@ -36,28 +36,14 @@
 
                 <label for="ideatext">Description</label>
                 <textarea class="form-control" rows="4" name="ideatext" id="ideatext"></textarea><br>
-
+                
+                
+                <?php if(!empty($categories)) { ?>
                 <label for="category">Catégorie</label>
-                <select class="form-control" name="category" id="category">
-                    <?php if($_SESSION['project'] == 1) { ?>
-                        <option>Rêve</option>
-                        <option>Mise en oeuvre</option>
-                        <option>Projet</option>
-                    <?php } else if($_SESSION['project'] == 2) { ?>
-                        <option>Boulot</option>
-                        <option>Détente</option>
-                    <?php } else if($_SESSION['project'] == 3) { ?>
-                        <option value=0>Sélectionner une catégorie</option>    
-                        <option value=1>L'identité / La marque du club / La communication</option>
-                        <option value=2>Les infrastructures / Les salles</option>
-                        <option value=3>L'arbitrage</option>
-                        <option value=4>L'aspect technique handball / La performance sportive</option>
-                        <option value=5>L'animation écoles et le tournoi des écoles / L'ancrage territorial</option>
-                        <option value=6>La citoyenneté</option>
-                        <option value=7>La convivialité</option>
-                        <option value=8>La recherche de financements</option>
-                    <?php } ?>
+                <select class="form-control" name="category" id="category"> 
+                    <?php echo $categories; ?>
                 </select><br>
+                <?php } ?>
 
                 <label for="ideaimg">Image d'illustration (facultatif)</label>
                 <input type="file" name="ideaimg" id="ideaimg" class="form-control" /> <!-- Upload de fichier -->

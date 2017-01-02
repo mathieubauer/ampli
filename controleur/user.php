@@ -38,6 +38,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
         $requete->execute(array($id_user));
         $donnees = $requete->fetch();
         $likes_obtenus = $donnees[0];
+        if ($likes_obtenus == NULL) { $likes_obtenus = 0;}
         
         $requete = $bdd->prepare('SELECT COUNT(*) FROM ampli_contributions WHERE id_user = ?');
         $requete->execute(array($id_user));
@@ -52,7 +53,7 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
 $donnees0 = $requete0->fetch();
 
         $fin = $nb_ideas;
-        $debut = $fin - 5;
+        $debut = max(0, $fin - 5);
         $requete2 = $bdd->prepare('SELECT * FROM ampli_ideas WHERE id_user = ? ORDER BY id ASC LIMIT ' . $debut . ', ' . $fin);
         $requete2->execute(array($id_user));
                                 

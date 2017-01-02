@@ -35,6 +35,9 @@ if (!$resultat) {
     $_SESSION['username'] = $username;
     $_SESSION['project'] = $resultat['id_project_default'];
     $_SESSION['project_name'] = $resultat['name_project_default'];
+    // et met à jour la dernière connexion
+    $id_user = $resultat['id'];
+    include_once('modele/update_derniere_connexion.php');
         
     header('Location: index.php');
 }

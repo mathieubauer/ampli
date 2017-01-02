@@ -51,7 +51,7 @@
 
             <?php if ($button_contribute == 0) { ?>
                 <div class="col-lg-12">
-                <button id="contribute_<?php echo ($donnees['id']); ?>" class="btn btn-primary" data-toggle="modal" data-target="#modalContribution" style="width: 100%;" >
+                <button id="contribute_<?php echo ($donnees['id']); ?>" class="btn btn-primary disabled" data-toggle="modalXXX" data-target="#modalContribution" style="width: 100%;" >
                 <span class="fa fa-users"></span> Je contribue !
                 </button>
                 </div> 
@@ -59,7 +59,7 @@
 
             <?php if ($button_portage == 0) { ?>
                 <div class="col-lg-12">
-                <button class="btn btn-primary" id="bouton_portage" data-toggle="modal" data-target="#modalPortage" style="width: 100%;" >
+                <button class="btn btn-primary disabled" id="bouton_portage" data-toggle="modalXXX" data-target="#modalPortage" style="width: 100%;" >
                 <span class="fa fa-hand-pointer-o"></span> Je porte !
                 </button>
                 </div>
@@ -80,15 +80,16 @@
         <div class="card">
 
             <div class="card-header">
-            <div class="col-lg-8"><h2><?php echo ($donnees['ideaname']); ?></h2></div>
-            <div class="col-lg-4"><p>Catégorie : <?php echo ($donnees['category']); ?></p></div>
+            <div class="col-lg-12"><h2><?php echo ($donnees['ideaname']); ?></h2></div>
             </div>
+            <div class="card-block">
+            <div class="col-lg-12"><strong class="block_category"><?php echo ($donnees['category']); ?></strong></div>
+            </div>
+            <hr class="hr_thin">
 
 
             <div class="card-block">
-
-            <p><?php echo ($donnees['ideatext']); ?></p>
-
+                <div class="col-lg-12"><p><?php echo ($donnees['ideatext']); ?></p></div>
             </div>  
 
             <div class="card-footer">
@@ -102,28 +103,40 @@
         </div>
         <br>
 
-        <div id="container_contributions" class="card">
+        <div class="card">
+<div id="container_contributions">
             <div class="card-header">
-                Contributions
-            </div>
-            
-            
-            
-            
-            
+                <h3 class="col-lg-12">Contributions</h3>
+            </div>   
 
             <?php 
             while ($contributions = $requete->fetch()) {
             ?>
-            <div class="card-footer">
-                <div class="col-lg-3"><span class="fa fa-user"></span> <?php echo ($contributions['author']); ?></div>
+            <div class="card-block card_block_thin">
+                <div class="col-lg-3"><span class="fa fa-user"></span>&nbsp;<strong><?php echo ($contributions['author']); ?></strong></div>
                 <div class="col-lg-7"><?php echo ($contributions['contribution']); ?></div>
-            </div>
+            </div><hr class="hr_thin">
             <?php } ?>
-        
-        </div>
-
             
+            
+                    
+</div>
+        
+        <div class="card-footer">
+
+            <div class="col-md-8">  
+            <div class="input-group">
+            <!-- <textarea class="form-control" rows="4" name="contribution" id="contribution"></textarea> -->
+            <input type="text" name="contribution" id="contribution" class="form-control" placeholder="Votre contribution" />
+            </div>
+            </div>
+
+            <div class="col-md-4">
+            <button type="submit" id="contribution_<?php echo ($donnees['id']); ?>" class="btn btn-primary contribution">Envoyer</button>
+            </div>            
+
+        </div>
+        </div>
 
     </div>
     

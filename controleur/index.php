@@ -18,13 +18,21 @@ if (isset($_SESSION['id']) AND isset($_SESSION['username'])) {
     // Contenu administrateur
     if ($_SESSION['permissions'] == 'admin') {
                 
+        include('modele/liste_projects.php');
         include_once('vue/contenu_admin.php');
-        include_once('vue/contenu_user.php');
+        //include_once('vue/contenu_user.php');
         
+        $id_project = $_SESSION['project'];
+        $requete = $bdd->prepare('SELECT categories FROM ampli_projects WHERE id = :id_project');
+        $requete->execute(array('id_project' => $id_project));
+        $resultat = $requete->fetch();
+        $categories = $resultat['categories'];
+        
+        //include('modele/liste_projects.php');
         include_once('vue/form_idea.php');
         include_once('vue/form_idea_modif.php');
         
-        $id_project = $_SESSION['project'];
+       
         include_once('modele/liste_ideas.php');
         include_once('vue/liste_ideas.php');
         

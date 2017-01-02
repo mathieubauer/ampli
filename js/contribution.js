@@ -17,7 +17,7 @@ $(".contribution").click(function() {
         dataType: 'json',
         success: function(json) {
             
-            var contributionForme = '<div class="card-footer"><div class="col-lg-3"><span class="fa fa-user"></span> ' + json.username + '</div><div class="col-lg-7">' + contribution + '</div></div>';
+            var contributionForme = '<div class="card-block card_block_thin"><div class="col-lg-3"><span class="fa fa-user"></span> ' + json.username + '</div><div class="col-lg-7">' + contribution + '</div></div>';
             
             $('#container_contributions').append(contributionForme);
             $('#nbcontributions_' + id).html(json.nbContributions);

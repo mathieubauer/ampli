@@ -129,6 +129,41 @@ while ($donnees = $requete->fetch()) {
 }
 $requete->closeCursor();
 ?>  
+    
+    <!-- Carte Proposer une idée -->
+    
+<div class="col-md-3 grid-item" id="carte_new" data-toggle="modal" data-target="#myModal">
+<div class="grid-item-content">
+
+    <div class="card card_idea" >
+
+        <!-- IMAGE CARTE -->
+        <img src="img/placeholder/0_plus.png" alt="Card image" width="100%" height="100%" class="card-img-top">
+        
+
+        <!-- TEXTE CARTE -->
+        <div class="card-block">
+            <h3 class="card-title">Proposer une idée</h3>
+        </div>
+
+        <!-- FOOTER CARTE 
+        <div class="card-footer text-muted">
+            
+            <div class="col-xs-6">
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+                    <span class="fa fa-lightbulb-o fa-lg"></span>&nbsp;  Proposer une idée
+                    </button>
+            </div>            
+                       
+        </div>
+-->
+           
+    </div>
+
+</div>
+</div>
+    
+    
 
 </div>                   
 </div>

@@ -211,16 +211,31 @@ a:hover {
     color: #202E42;
 }
 
+#carte_new,
+#carte_new:hover {
+    cursor: pointer;
+}
+
 
 /* ########## Page d'idée ########## */
+
+.idee_page .card-header {
+    background-color: #FFEDBB;  /* Couleur secondaire */
+    color: #202E42;             /* Couleur de base */
+}   
 
 .idee_page .card-header h2, .idee_page .card-header p {
     margin: 10px 0;
     line-height: 36px;
 }
 
-.idee_page .card p {
+.idee_page .card-header h3 {
+    margin: 5px 0;
+}
+
+.idee_page .card p, .idee_page .card .block_category {
     font-size: 20px;
+    margin: 0;
 }
 
 .idee_page img {
@@ -237,7 +252,16 @@ a:hover {
     padding: 10px 20px;
 }
 
+.card_block_thin {
+    padding: 5px 20px;
+}
+
 /* ########## Page utilisateur ########## */
+
+.user_page .card-header {
+    background-color: #FFEDBB;  /* Couleur secondaire */
+    color: #202E42;             /* Couleur de base */
+} 
 
 .hr_thin {
     margin: 0;
@@ -263,4 +287,10 @@ a:hover {
     background-color: #224C4F;
     border-color: #224C4F;
     color: #fff;
+}
+
+/* ########## Pages admin ########## */
+
+.table_users {
+    font-size: 12px;
 }

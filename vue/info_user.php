@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row user_page">
     
     <!-- Colonne gauche ###################### -->
     <div class="col-md-3">
@@ -32,10 +32,10 @@
             
             <div class="card-block">
                 
-                <?php echo $nb_ideas; ?> idées proposées<br>
-                <?php echo $likes_donnes; ?> likes donnés<br>
-                <?php echo $likes_obtenus; ?> likes obtenus<br>
-                <?php echo $nb_contributions; ?> contributions aux idées<br>
+                <?php echo $nb_ideas; ?> idée(s) proposée(s)<br>
+                <?php echo $likes_donnes; ?> like(s) donné(s)<br>
+                <?php echo $likes_obtenus; ?> like(s) obtenu(s)<br>
+                <?php echo $nb_contributions; ?> contribution(s) aux idées<br>
             
             </div>
 

@@ -135,24 +135,32 @@ if ($_GET['section'] == 'admin_users') {
     include_once('controleur/admin_users.php');
 }
 
-if ($_GET['section'] == 'suppression_user') {
-    include_once('controleur/suppression_user.php');
+if ($_GET['section'] == 'admin_ideas') {
+    include_once('controleur/admin_ideas.php');
+}
+
+if ($_GET['section'] == 'admin_projects') {
+    include_once('controleur/admin_projects.php');
 }
 
 if ($_GET['section'] == 'admin_groupes') {
     include_once('controleur/admin_groupes.php');
 }
 
-if ($_GET['section'] == 'edit_groupe') {
-    include_once('controleur/edit_groupe.php');
-}
-
-if ($_GET['section'] == 'admin_ideas') {
-    include_once('controleur/admin_ideas.php');
+if ($_GET['section'] == 'suppression_user') {
+    include_once('controleur/suppression_user.php');
 }
 
 if ($_GET['section'] == 'suppression_idea') {
     include_once('controleur/suppression_idea.php');
+}
+
+if ($_GET['section'] == 'edit_groupe') {
+    include_once('controleur/edit_groupe.php');
+}
+
+if ($_GET['section'] == 'crea_project') {
+    include_once('controleur/crea_project.php'); 
 }
 
 // Idées ####################################################################
@@ -180,6 +188,5 @@ if ($_GET['section'] == 'crea_message') {
 }
 
 
-
-
 // Erreur 404 gérée ici ?
+

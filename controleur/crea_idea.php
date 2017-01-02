@@ -188,15 +188,21 @@ if (!empty($_POST['ideaname']) && !empty($_POST['ideatext'])) {
     
     $ideatext = $_POST['ideatext']; 
     $ideatext = nl2br($ideatext);
-            
-    if(isset($target_file)) { 
-        $ideaimg = $pic_name_modified; 
+    
+    if(isset($_POST['category'])) {
+        $category = $_POST['category'];
     } else {
-        $ideaimg = 'img/placeholder/' . $_SESSION['project'] . '_' . $_POST['category'] . '.png';
+        $category = 'Default';
     }
     
-    //$category = $_POST['category'];
-    $category = $_POST['category'];
+    if(isset($target_file)) { 
+        $ideaimg = $pic_name_modified; 
+    } else if(isset($_POST['category'])) {
+        $ideaimg = 'img/placeholder/' . $_SESSION['project'] . '_' . $category . '.png';
+    } else {
+        $ideaimg = 'img/placeholder/default.png';
+    }
+    
     $id_user = $_SESSION['id'];
     $likes = 0; 
     $id_project = $_SESSION['project'];

@@ -15,6 +15,7 @@
 
 --> 
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css" />
         
         
         <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -82,6 +83,13 @@
                     <li class="nav-item">
                     <a class="nav-link non_cliquable" href="index.php"><?php echo $_SESSION['project_name']; ?></a>
                     </li>
+                    <?php } ?>
+                    
+                    <?php if ($_SESSION['permissions'] == 'admin') { ?>
+                    <li class="nav-item">
+                        <a href="#menu-toggle" class="nav-link" id="menu-toggle">ADMINISTRATEUR</a>
+                    </li>
+                    
                     <?php } ?>
                     
                     <?php if (isset($_SESSION['id'])) { ?>
